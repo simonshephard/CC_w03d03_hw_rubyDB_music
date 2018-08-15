@@ -34,12 +34,12 @@ DONE-name
 ---Methods------
 DONE-reader
 DONE-create
--save
--list all
--list the artist an album belongs to
+DONE-save
+DONE-list all
+DONE-list the artist an album belongs to
 -Edit Artists/Albums
--Delete Artists/Albums
--Find Artists/Albums by their ID
+DONE-Delete Artists/Albums
+DONE-Find Artists/Albums by their ID
 
 
 ALBUMS OBJECT
@@ -52,12 +52,22 @@ DONE-artistID
 ---Methods------
 DONE-reader
 DONE-create
--save
--list all
--list all albums by an artist
+DONE-save
+DONE-list all
+DONE-list all albums by an artist
 -Edit Artists/Albums
--Delete Artists/Albums
--Find Artists/Albums by their ID
+DONE-Delete Artists/Albums
+DONE-Find Artists/Albums by their ID
+
+SQL RUNNER / CONSOLE FILE
+---------------------------------------
+DONE-require
+DONE-create artists
+DONE-create albums
+DONE-delete all
+DONE-save artists
+DONE-save albums
+DONE-sql runner
 
 
 NOTES
@@ -72,16 +82,16 @@ ORIGINAL SPEC
 Music Collection
 You have been asked to create an app that will allow a music collector to manage their collection of CDs/records.
 In their console they would like to be able to:
--Create and Save Artists
--Create and Save Albums
--List All Artists/Albums
--List all the albums they have by an artist
--Show the artist any album belongs to
-Every artist should have a name, and each album should have a name/title, genre and artist ID.
+DONE-Create and Save Artists
+DONE-Create and Save Albums
+DONE-List All Artists/Albums
+DONE-List all the albums they have by an artist
+DONE-Show the artist any album belongs to
+DONEEvery artist should have a name, and each album should have a name/title, genre and artist ID.
 
 Further tasks
 Additionally it would be nice to be able to:
 -Edit Artists/Albums
--Delete Artists/Albums
--Find Artists/Albums by their ID
+DONE-Delete Artists/Albums
+DONE-Find Artists/Albums by their ID
 -Remember to regularly git commit!

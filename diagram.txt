@@ -1,0 +1,87 @@
+
+FILES / SET-UP
+---------------------------------------
+DONE-music database in PG
+DONE-db/music.sql sql/database/tables
+DONE-models/artist.rb
+DONE-models/album.rb
+DONE-console.rb for running
+DONE-db/sql_runner.rb for queries
+---TEMRINALCOMMANDS---
+DONE-createdb music
+DONE-psql -d music -f db/music.sql
+
+
+artists table
+---------------------------------------
+DONE-id SERIAL8 PRIMARY KEY
+DONE-name VARCHAR(255)
+
+
+albums table
+---------------------------------------
+DONE-id SERIAL8 PRIMARY KEY
+DONE-name VARCHAR(255)
+DONE-genre VARCHAR(255)
+DONE-artist_id INT8 REFERENCES artists(id)
+
+
+ARTIST OBJECT
+---------------------------------------
+---Properties---
+DONE-id
+DONE-name
+---Methods------
+DONE-reader
+DONE-create
+-save
+-list all
+-list the artist an album belongs to
+-Edit Artists/Albums
+-Delete Artists/Albums
+-Find Artists/Albums by their ID
+
+
+ALBUMS OBJECT
+---------------------------------------
+---Properties---
+DONE-id
+DONE-name
+DONE-genre
+DONE-artistID
+---Methods------
+DONE-reader
+DONE-create
+-save
+-list all
+-list all albums by an artist
+-Edit Artists/Albums
+-Delete Artists/Albums
+-Find Artists/Albums by their ID
+
+
+NOTES
+---------------------------------------
+ONE TO MANY
+-one ARTIST has may ALBUMS
+-many ALBUMS belong to ONE ARTIST
+
+
+ORIGINAL SPEC
+---------------------------------------
+Music Collection
+You have been asked to create an app that will allow a music collector to manage their collection of CDs/records.
+In their console they would like to be able to:
+-Create and Save Artists
+-Create and Save Albums
+-List All Artists/Albums
+-List all the albums they have by an artist
+-Show the artist any album belongs to
+Every artist should have a name, and each album should have a name/title, genre and artist ID.
+
+Further tasks
+Additionally it would be nice to be able to:
+-Edit Artists/Albums
+-Delete Artists/Albums
+-Find Artists/Albums by their ID
+-Remember to regularly git commit!

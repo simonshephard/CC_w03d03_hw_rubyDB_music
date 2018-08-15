@@ -7,7 +7,7 @@ DONE-models/artist.rb
 DONE-models/album.rb
 DONE-console.rb for running
 DONE-db/sql_runner.rb for queries
----TEMRINALCOMMANDS---
+---TEMRINAL COMMANDS---
 DONE-createdb music
 DONE-psql -d music -f db/music.sql
 
@@ -72,16 +72,16 @@ DONE-sql runner
 
 NOTES
 ---------------------------------------
-ONE TO MANY
--one ARTIST has may ALBUMS
--many ALBUMS belong to ONE ARTIST
+OKONE TO MANY
+OK-one ARTIST has may ALBUMS
+OK-many ALBUMS belong to ONE ARTIST
 
 
 ORIGINAL SPEC
 ---------------------------------------
-Music Collection
-You have been asked to create an app that will allow a music collector to manage their collection of CDs/records.
-In their console they would like to be able to:
+OKMusic Collection
+OKYou have been asked to create an app that will allow a music collector to manage their collection of CDs/records.
+OKIn their console they would like to be able to:
 DONE-Create and Save Artists
 DONE-Create and Save Albums
 DONE-List All Artists/Albums
@@ -89,9 +89,9 @@ DONE-List all the albums they have by an artist
 DONE-Show the artist any album belongs to
 DONEEvery artist should have a name, and each album should have a name/title, genre and artist ID.
 
-Further tasks
-Additionally it would be nice to be able to:
+OKFurther tasks
+OKAdditionally it would be nice to be able to:
 -Edit Artists/Albums
 DONE-Delete Artists/Albums
 DONE-Find Artists/Albums by their ID
--Remember to regularly git commit!
+DONE-Remember to regularly git commit!

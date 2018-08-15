@@ -4,7 +4,8 @@ require_relative('./artist')
 
 class Album
 
-  attr_reader :id, :name
+  attr_reader :id
+  attr_accessor :name, :genre, :artist_id
 
   def initialize(details)
     @id = details['id'].to_i if details['id']
@@ -20,14 +21,14 @@ class Album
   end
 
   def self.delete_all
-    sql = "DELETE FROM albums"
+    sql = "DELETE FROM albums;"
     values = []
     result = SqlRunner.run(sql, values)
   end
 
   def self.find_by_name(name)
     sql = "SELECT * FROM albums
-    WHERE name = $1"
+    WHERE name = $1;"
     values = [name]
     result = SqlRunner.run(sql, values)
     return Album.new(result[0])
@@ -35,7 +36,7 @@ class Album
 
   def self.find_by_id(id)
     sql = "SELECT * FROM albums
-    WHERE id = $1"
+    WHERE id = $1;"
     values = [id]
     result = SqlRunner.run(sql, values)
     return Album.new(result[0])
@@ -53,15 +54,25 @@ class Album
   end
 
   def delete()
-    sql = "DELETE FROM albums WHERE id = $1"
+    sql = "DELETE FROM albums WHERE id = $1;"
     values = [@id]
+    result = SqlRunner.run(sql, values)
+  end
+
+  def update()
+    sql = "UPDATE albums
+    SET
+    (name, genre, artist_id)
+    = ($1, $2, $3)
+    WHERE id = $4;"
+    values = [@name, @genre, @artist_id, @id]
     result = SqlRunner.run(sql, values)
   end
 
   def artists
     sql = "SELECT * FROM artists
-    WHERE artist_id = $1"
-    values = [@id]
+    WHERE id = $1;"
+    values = [@artist_id]
     artists = SqlRunner.run(sql, values)
     return artists.map {|artist| Artist.new(artist)}
   end
